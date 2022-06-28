@@ -3,7 +3,7 @@
   regexManagers: [
     {
       fileMatch: ['^dpkg-versions.yaml$'],
-      matchStrings: ["(?<depName>.*): '?(?<currentValue>.*)'?"],
+      matchStrings: [" *(?<depName>.*): '?(?<currentValue>.*)'?"],
       datasourceTemplate: 'repology',
       versioningTemplate: 'loose',
     },

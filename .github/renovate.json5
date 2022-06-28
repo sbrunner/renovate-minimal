@@ -1,4 +1,12 @@
 {
-  extends: ["config:base", ":dependencyDashboard"],
-  lockFileMaintenance: { enabled: true },
+  extends: ['config:base'],
+  regexManagers: [
+    {
+      fileMatch: ['^dpkg-versions.yaml$'],
+      matchStrings: ["(?<depName>.*): '?(?<currentValue>.*)'?"],
+      datasourceTemplate: 'repology',
+      versioningTemplate: 'loose',
+    },
+  ],
+  packageRules: [],
 }

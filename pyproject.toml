@@ -6,4 +6,4 @@ authors = []
 
 [tool.poetry.dependencies]
 python = ">=3.8,<3.11"
-tilecloud = "1.8.0"
+tilecloud = "1.8.1"
